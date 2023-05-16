@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function calculateRectArea(a,b){
+        //     return a*b;
+        // }
+        // var result=calculateRectArea(5,10);
+        // console.log(result);
+
+        function sayHello(name){
+            console.log('Hello '+name);
+        }
+        sayHello('Ben')
+
+        function sayHelloWorld(){
+                console.log('Hello World');
+        }
+        sayHelloWorld();
+
+
+        // var calculateRectArea = new Function('a','b','return a*b');
+        // var result=calculateRectArea(5,10);
+        // console.log(result);
+
+        function sum(){
+            let returnValue =0;
+
+            for(let i=0; i<arguments.length; i++){
+                returnValue += arguments[i];
+            }
+            return returnValue;
+        }
+
+        let someResult=sum(10,15,15,33);
+
+        console.log(someResult);
+
+        // function countdown(start){
+        //     for (let i=start; i>=0; i--){
+        //         console.log(i);
+        //     }
+        // }
+
+        function countdown(start){
+            if(start<0){
+                return;
+            }
+            console.log(start);
+            countdown(--start);
+        }
+
+        countdown(8);
+
+        function sort(array){
+            let temp;
+            let sorted=true;
+
+            for(let i=0; i<array.length; i++){
+
+                if (array[i]>array[i+1]){
+
+                    temp=array[i];
+                    array[i]=array[i+1];
+                    array[i+1]=temp;
+                    sorted=false;
+
+                }
+            }
+            if(!sorted){
+                sort(array);
+            }
+            return array;
+        }
+
+        let numArray=[18,3,24,36,8,11];
+
+        numArray=sort(numArray);
+
+        console.log(numArray);
+
+
+
+    </script>
+    
+</body>
+</html>

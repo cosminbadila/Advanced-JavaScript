@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function Student(){
+
+    this.courses=[];
+
+    this.addCourses = function(courses){
+
+        courses.forEach((value, index) =>{
+            this.courses[index]=value;
+
+        });
+            
+    }
+}
+
+var s=new Student();
+s.addCourses(['Math','Geography','History']);
+
+console.log(s.courses);
+
+    </script>
+    
+</body>
+</html>
