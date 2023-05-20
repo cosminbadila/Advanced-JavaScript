@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timing and Callback function</title>
+    <style>
+        #my-button{
+            width: 200px;
+            height: 40px;
+            color: white;
+            background-color: teal;
+            border-radius: 4px;
+            line-height: 40px;
+            text-align:center ;
+            font-family: sans-serif;
+        }
+        #my-button:hover{
+            background-color: rgb(30, 109, 109);
+            cursor: pointer;
+            font-weight: bold ;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="my-button">Click Me</button>
+
+    <script>
+        var myButton=document.getElementById('my-button');
+        myButton.addEventListener('click',function(){
+            alert('Hello from modal window');
+
+            console.log('Hello from statement after alert() method.');
+        });
+
+        console.log('Hello from some code after addEventListener() .method')
+
+    </script>
+</body>
+</html>

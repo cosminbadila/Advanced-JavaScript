@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+
+    <script>
+        // window.addEventListener('load',function(){
+
+        //     console.log('Web page has been loaded')
+
+        //     document.getElementById('my-button').addEventListener('click',function(){
+
+        //         setInterval(function(){
+        //             myHeading.style.color= myHeading.style.color == 'black'? 'blue' : 'red' ;
+        //         }, 500) ;   
+        //     });
+        // });
+
+        var promise = new Promise(function(resolve, reject){
+
+            let result = Math.random()*10;
+
+            resolve(result);
+        });
+
+        promise.then(function(result){
+            console.log('Operation completed succesfully', result);
+
+        }, function(error){
+            console.log('Promise failed', error);
+
+        });
+
+        console.log('Hello to everyone!')
+
+
+
+    </script>
+    
+</body>
+</html>
